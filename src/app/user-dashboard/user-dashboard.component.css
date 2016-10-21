@@ -8,4 +8,8 @@
     margin-top:10%;
     margin-left:auto;
     margin-right: auto;
+    float: left;
+}
+app-user-stream{
+    float: right;
 }

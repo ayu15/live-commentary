@@ -33,16 +33,15 @@ export class UserDashboardComponent implements OnInit {
     }
 
     private inputListener(keyCode){
-        console.log(keyCode);
-        console.log(this.userInput.nativeElement.value);
 	    let userMessage : string = this.userInput.nativeElement.value;
-	    if (keyCode == 13){
+	    if (keyCode == 13 && userMessage.length >= 2){
 		    this.addMessageToStream(userMessage);
+		    this.userInput.nativeElement.value = "";
 	    }
     }
 
     private addMessageToStream(msg: string) {
-        this.userAyu.set(msg)
+        this.userAyu.push(msg)
             .then(function () {
                 console.log('Synchronization succeeded');
             })
