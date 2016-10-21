@@ -10,5 +10,27 @@
 </head>
 <body>
   <app-root>Loading...</app-root>
+
+  <script src="https://www.gstatic.com/firebasejs/3.5.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDBXxnZA-NFW0SEEDJkGxqOpRxbghYY52U",
+      authDomain: "live-commentary-6b8ac.firebaseapp.com",
+      databaseURL: "https://live-commentary-6b8ac.firebaseio.com",
+      storageBucket: "live-commentary-6b8ac.appspot.com",
+      messagingSenderId: "991137572007"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase-messaging.js"></script>
+
+  <!-- Leave out Storage -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase-storage.js"></script> -->
+
 </body>
 </html>

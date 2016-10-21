@@ -1,0 +1,11 @@
+#userInput {
+    margin:auto;
+}
+
+#userInputDiv{
+    width:60%;
+    display: block;
+    margin-top:10%;
+    margin-left:auto;
+    margin-right: auto;
+}

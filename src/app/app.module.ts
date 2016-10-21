@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { UserStreamComponent } from './user-stream/user-stream.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserDashboardComponent,
+    UserStreamComponent
   ],
   imports: [
     BrowserModule,
