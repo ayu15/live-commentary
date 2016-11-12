@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ViewChild} from "@angular/core/src/metadata/di";
+import {UserStreamComponent} from "../user-stream/user-stream.component";
 // import * as firebase from 'firebase';
 var firebase = require('firebase/app');
 require('firebase/auth');
@@ -16,6 +17,7 @@ var app = firebase.initializeApp(config);
 // require("firebase/auth");
 // require("firebase/database");
 
+var date = new Date();
 @Component({
     selector: 'app-user-dashboard',
     templateUrl: './user-dashboard.component.html',
@@ -35,18 +37,27 @@ export class UserDashboardComponent implements OnInit {
     private inputListener(keyCode){
 	    let userMessage : string = this.userInput.nativeElement.value;
 	    if (keyCode == 13 && userMessage.length >= 2){
-		    this.addMessageToStream(userMessage);
+		    let hours = date.getHours();
+		    let minutes = date.getMinutes();
+		    let seconds = date.getSeconds();
+		    let displayTime = hours + ":" + minutes + ":" + seconds;
+	    	let msgObj = {
+	    		msg: userMessage,
+			    time: displayTime
+		    };
+		    this.addMessageToStream(msgObj);
 		    this.userInput.nativeElement.value = "";
 	    }
     }
 
-    private addMessageToStream(msg: string) {
+    private addMessageToStream(msg: any) {
         this.userAyu.push(msg)
             .then(function () {
-                console.log('Synchronization succeeded');
+	            console.log('Synchronization succeeded');
             })
             .catch(function (error) {
                 console.log('Synchronization failed');
             });
     }
+
 }
