@@ -1,6 +1,8 @@
-<div id="userInputDiv">
-    <span>
-  <input id="userInput" size="45" (keyup)="inputListener($event.keyCode)" #userInput>
-        </span>
+<div class="row" id="dashboard">
+	<div id="userInputDiv" class="col-md-5">
+		<input id="userInput" (keyup)="inputListener($event.keyCode)" #userInput>
+	</div>
+	<div class="col-md-7">
+		<app-user-stream></app-user-stream>
+	</div>
 </div>
-<app-user-stream></app-user-stream>

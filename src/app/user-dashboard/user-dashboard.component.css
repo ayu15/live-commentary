@@ -1,15 +1,15 @@
-#userInput {
-    margin:auto;
-}
+/*#userInput {*/
+    /*margin:auto;*/
+/*}*/
 
 #userInputDiv{
-    width:60%;
     display: block;
     margin-top:10%;
-    margin-left:auto;
+    margin-left:2%;
     margin-right: auto;
     float: left;
+    border:solid 2px;
 }
-app-user-stream{
-    float: right;
-}
+/*app-user-stream{*/
+    /*float: right;*/
+/*}*/
