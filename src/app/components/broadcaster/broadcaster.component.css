@@ -1,6 +1,3 @@
-/*#userInput {*/
-    /*margin:auto;*/
-/*}*/
 
 #userInputDiv{
     display: block;
@@ -10,6 +7,3 @@
     float: left;
     border:solid 2px;
 }
-/*app-user-stream{*/
-    /*float: right;*/
-/*}*/
