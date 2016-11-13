@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UserStreamComponent } from './user-stream/user-stream.component';
-
+import { MaterialModule } from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,6 +14,7 @@ import { UserStreamComponent } from './user-stream/user-stream.component';
     UserStreamComponent
   ],
   imports: [
+	  MaterialModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule
